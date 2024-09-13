@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perplexity AI BibTeX Generator</title>
+  <style>
+    body { width: 300px; padding: 10px; font-family: Arial, sans-serif; }
+    input, button { width: 100%; margin-bottom: 10px; padding: 5px; }
+    #status, #instructions, #result { margin-top: 10px; padding: 5px; border-radius: 3px; }
+    .success { background-color: #d4edda; color: #155724; }
+    .error { background-color: #f8d7da; color: #721c24; }
+    .info { background-color: #e2e3e5; color: #383d41; }
+    #apiKeySection { display: none; }
+  </style>
+</head>
+<body>
+  <h2>Perplexity AI BibTeX Generator</h2>
+  <div id="apiKeySection">
+    <input type="password" id="apiKey" placeholder="Enter your Perplexity AI API key">
+    <button id="saveButton">Save API Key</button>
+  </div>
+  <div id="generatorSection" style="display: none;">
+    <input type="text" id="paperTitle" placeholder="Enter paper title">
+    <button id="generateButton">Generate BibTeX</button>
+    <button id="changeApiKeyButton">Change API Key</button>
+  </div>
+  <div id="status"></div>
+  <div id="result"></div>
+  <div id="instructions" class="info" style="display: none;">
+    To use on any webpage: Select a paper title, right-click, and choose "Generate BibTeX citation"
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
